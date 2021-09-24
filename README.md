@@ -36,3 +36,6 @@ python run.py Mariners Wpct
 ['W', 'L', 'Wpct', 'GB', 'WCGB', 'dateEnd', 'deltaData', 'endData.ExpW', 'endData.ExpL', 'endData.rosW', 'endData.divTitle', 'endData.div2Title', 'endData.wcTitle', 'endData.poffTitle', 'endData.wcWin', 'endData.dsWin', 'endData.csWin', 'endData.wsWin', 'endData.sos']
 ```
 
+#### Example Output
+
+![alt text](image.png "Mariners Playoff Odds")
