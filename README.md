@@ -30,10 +30,40 @@ Get the Mariners' win percentage over the course of the 2021 season, but don't r
 python run.py Mariners Wpct
 ```
 
-#### List of stats you can use (See Fangraphs for Data Definitions)
+#### List of stats you can use
 
 ```
-['W', 'L', 'Wpct', 'GB', 'WCGB', 'dateEnd', 'deltaData', 'endData.ExpW', 'endData.ExpL', 'endData.rosW', 'endData.divTitle', 'endData.div2Title', 'endData.wcTitle', 'endData.poffTitle', 'endData.wcWin', 'endData.dsWin', 'endData.csWin', 'endData.wsWin', 'endData.sos']
+W - wins
+
+L - losses
+
+Wpct - win percentage
+
+GB - games back in the division
+
+WCGB - games back in the wildcard
+
+endData.ExpW - expected wins
+
+endData.ExpL - expected losses
+
+endData.rosW - rest of season win percentage
+
+endData.divTitle - odds of winning the division
+
+endData.wcTitle - odds of winning the wildcard
+
+endData.poffTitle - odds of making the playoffs
+
+endData.wcWin - odds of advancing to the division series
+
+endData.dsWin - odds of advancing to the league championship series
+
+endData.csWin - odds of advancing to the world series
+
+endData.wsWin - odds of winning the world series
+
+endData.sos - strength of schedule
 ```
 
 #### Example Output

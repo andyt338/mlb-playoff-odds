@@ -3,9 +3,10 @@ from datetime import datetime
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 import csv
 import sys
+
+from constants import *
 
 
 def dates_bwn_twodates(start_date, end_date):
@@ -55,17 +56,14 @@ if __name__ == "__main__":
     team_data = pd.read_csv(filename, sep=',')
     team_data = team_data.loc[team_data['shortName'] == team]
 
-    tick_spacing = 30
-
     fig, ax = plt.subplots(1,1)
-    ax.plot(team_data['date'], team_data[stat])
+    ax.plot(team_data['date'], team_data[stat], color=team_colors[team])
 
-    plt.xlabel('date', fontsize=18)
-    plt.ylabel(stat, fontsize=16)
+    plt.xlabel('date', fontsize=16)
+    plt.ylabel(stat_descriptions[stat], fontsize=16)
 
-    fig.suptitle(team, fontsize=12)
-
-    ax.xaxis.set_major_locator(ticker.MultipleLocator(tick_spacing))
+    fig.suptitle(team, fontsize=20)
+    ax.xaxis.set_major_locator(plt.MaxNLocator(5))
 
     plt.show()
 
