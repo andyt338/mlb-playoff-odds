@@ -1,8 +1,16 @@
 ## MLB Playoff Odds (and other stats) Visualizer
 
 #### Install Requirements
+
+This project was built with the following:
 ```
-pip3 install -r requirements.txt
+Python 3.9.5
+pip 21.1.1
+```
+
+Install libraries:
+```
+pip install -r requirements.txt
 ```
 
 #### Example usage
@@ -24,4 +32,7 @@ python run.py Mariners Wpct
 
 #### List of stats you can use (See Fangraphs for Data Definitions)
 
+```
 ['W', 'L', 'Wpct', 'GB', 'WCGB', 'dateEnd', 'deltaData', 'endData.ExpW', 'endData.ExpL', 'endData.rosW', 'endData.divTitle', 'endData.div2Title', 'endData.wcTitle', 'endData.poffTitle', 'endData.wcWin', 'endData.dsWin', 'endData.csWin', 'endData.wsWin', 'endData.sos']
+```
+

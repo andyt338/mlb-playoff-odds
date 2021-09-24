@@ -3,8 +3,10 @@ from datetime import datetime
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import csv
 import sys
+
 
 def dates_bwn_twodates(start_date, end_date):
     diff = abs(start_date.diff(end_date).days)
@@ -30,6 +32,7 @@ def create_data_table(dates):
 
     return df_total
 
+
 if __name__ == "__main__":
 
     team = sys.argv[1]
@@ -52,6 +55,17 @@ if __name__ == "__main__":
     team_data = pd.read_csv(filename, sep=',')
     team_data = team_data.loc[team_data['shortName'] == team]
 
-    plt.plot(team_data['date'], team_data[stat], label=stat)
+    tick_spacing = 30
+
+    fig, ax = plt.subplots(1,1)
+    ax.plot(team_data['date'], team_data[stat])
+
+    plt.xlabel('date', fontsize=18)
+    plt.ylabel(stat, fontsize=16)
+
+    fig.suptitle(team, fontsize=12)
+
+    ax.xaxis.set_major_locator(ticker.MultipleLocator(tick_spacing))
+
     plt.show()
 
